@@ -17,7 +17,7 @@ class UserController extends Controller
         $users = User::paginate();
 
         return response()->json([
-            'data' => UserResource::collection($users)
+            'EmployeeList' => UserResource::collection($users)
         ]);
     }
 
