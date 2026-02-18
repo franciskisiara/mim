@@ -13,5 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::updateOrCreate([
+            'Email' => 'jane.smith@contoso.com'
+        ], [
+            'EmployeeID' => 1002,
+            'FirstName' => 'Jane',
+            'LastName' => 'Smith',
+            'DisplayName' => 'Jane Smith',
+        ]);
     }
 }
